@@ -1,0 +1,171 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>吴文杰 - 前端开发工程师</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+    color: #2c2c2c;
+    background: #f0f0f0;
+    font-size: 12.5px;
+    line-height: 1.28;
+  }
+  .page {
+    max-width: 794px; /* A4 */
+    margin: 16px auto;
+    background: #fff;
+    padding: 20px 30px;
+    border: 2px solid #9cbcf0;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 9px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e5e5e5;
+  }
+  .name-row { display: flex; align-items: baseline; gap: 12px; }
+  h1 { font-size: 21px; color: #1a1a1a; letter-spacing: 1px; }
+  .job-intent { font-size: 14px; color: #1a56db; font-weight: 500; }
+  .contact { margin-top: 8px; font-size: 12px; color: #555; }
+  .contact span { margin: 0 8px; }
+  .contact span:first-child { margin-left: 0; }
+  .contact .sep { color: #c8c8c8; }
+  .photo {
+    width: 68px;
+    height: 90px;
+    border: 1px solid #d8d8d8;
+    background: #fafafa;
+    border-radius: 6px;
+    overflow: hidden;
+    flex: none;
+    margin-left: 20px;
+  }
+  .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  h2 {
+    font-size: 13.5px;
+    color: #1a56db;
+    border-left: 4px solid #1a56db;
+    padding-left: 9px;
+    margin: 11px 0 4px;
+  }
+  .edu-line { display: flex; justify-content: space-between; flex-wrap: wrap; }
+  .school { font-weight: bold; }
+  .project { margin-bottom: 4px; }
+  .project-title { display: flex; justify-content: space-between; flex-wrap: wrap; font-weight: bold; }
+  .project .tech { color: #666; font-size: 12px; margin: 1px 0 3px; }
+  ul { padding-left: 18px; }
+  li { margin-bottom: 0; }
+  .skills-grid { display: flex; flex-wrap: wrap; gap: 2px 10px; }
+  .skills-grid .item { flex: 1 1 46%; min-width: 300px; font-size: 12px; }
+  .info-grid { display: grid; grid-template-columns: 1fr 1fr; }
+  .info-grid .item { font-size: 12px; }
+  .box { border: 1px solid #9cbcf0; border-radius: 3px; padding: 3px 10px 4px; margin-bottom: 4px; }
+  .box h2 { margin: 0 0 3px; background: #e8f0fe; border-radius: 2px; padding: 1px 8px; }
+  .evaluation p { margin-bottom: 3px; }
+  @media print {
+    body { background: #fff; }
+    .page { box-shadow: none; margin: 0; max-width: none; padding: 18px 28px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div>
+      <div class="name-row">
+        <h1>个人简历</h1>
+      </div>
+    </div>
+    <div class="photo"><img src="证件照.jpg" alt="证件照"></div>
+  </header>
+
+  <section class="box">
+  <h2>个人信息</h2>
+  <div class="info-grid">
+    <div class="item"><b>姓名：</b>吴文杰</div>
+    <div class="item"><b>性别：</b>男</div>
+    <div class="item"><b>年龄：</b>23</div>
+    <div class="item"><b>邮箱：</b>wwj1528039822@163.com</div>
+    <div class="item"><b>GitHub：</b>github.com/leon-wwj</div>
+    <div class="item"><b>求职意向：</b>前端开发工程师（Vue3 / AI 应用开发方向）</div>
+  </div>
+
+  </section>
+
+  <section class="box">
+  <h2>教育背景</h2>
+  <div class="edu-line">
+    <span class="school">长江大学（本科）· 化学与环境工程</span>
+    <span>2027届</span>
+  </div>
+  <p style="margin-top:3px;">大学英语四级（CET-4）已通过</p>
+  <p style="color:#666; font-size:13px; margin-top:2px;">跨专业自学前端，项目驱动学习：确定主线 → 真实项目 → 项目中补知识 → 整理沉淀</p>
+
+  </section>
+
+  <section class="box">
+  <h2>项目经历</h2>
+
+  <div class="project">
+    <div class="project-title">
+      <span>Vue3 AI Chat 应用（前后端分离）</span>
+      <span>开发中</span>
+    </div>
+    <div class="tech">Vue3 / TypeScript / Vite / Axios / FastAPI ｜ 代码：github.com/leon-wwj/ai-chat</div>
+    <ul>
+      <li>前后端全链路：Vue3 + TS 前端（子组件按职责拆分、props / emits 通信、自动滚动）+ FastAPI 后端（/chat、/models、CORS、Pydantic 校验、httpx 异步调用）—— 打通「前端 → 后端 → 大模型」链路（含流式输出）</li>
+      <li>流式渲染：fetch + ReadableStream 逐块读取、边到边渲染，不等整段返回；协议前缀区分「正文」与「错误信号」—— 错误不会被当成正文显示</li>
+      <li>TypeScript 落地：类型集中一处定义、别处复用 —— 传错结构编译期就报错</li>
+      <li>分层与可配置：请求分层（utils/request + service/chat），模型名 / Base URL / Key 可配置 —— 换模型服务只改配置；后端按「连接失败 / 非 200 / 格式异常」分层兜底，出错能直接判断是哪一类</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <div class="project-title">
+      <span>Vue3 Todo 企业化项目 · Task Manager</span>
+      <span>已完成</span>
+    </div>
+    <div class="tech">Vue3 / JavaScript / Vite / Vue Router / Pinia / Axios / json-server / Vitest ｜ 代码：github.com/leon-wwj/task-manager</div>
+    <ul>
+      <li>功能与鉴权：登录鉴权（token 存 localStorage + 路由全局守卫）；任务增删改查、完成切换、筛选、一键清除、完成数统计 —— 未登录直接跳登录页，页面不会一闪而过；可静态部署（Vercel）</li>
+      <li>四层职责分离：组件 → Pinia → service → api → Axios，拦截器自动注入 token —— 接口变更只动一层，上层不受影响</li>
+      <li>双存储与部署：service 层抽象「接口 / 本地存储」两种来源，环境变量切换；rewrites 修掉 SPA 刷新 404 —— 线上无后端也可用，刷新不再报错</li>
+    </ul>
+  </div>
+
+  </section>
+
+  <section class="box">
+  <h2>技能清单</h2>
+  <div class="skills-grid">
+    <div class="item"><b>主力（两个项目均使用）：</b>Vue3（Composition API）/ JavaScript / TypeScript / Vite / Axios / Git / npm</div>
+    <div class="item"><b>后端：</b>Python / FastAPI（AI Chat：/chat、/models、CORS、Pydantic 校验、httpx 流式）</div>
+    <div class="item"><b>工程与工具：</b>Vue Router、Pinia、Vitest、ESLint / Prettier、json-server、localStorage、Vercel 部署</div>
+    <div class="item"><b>基础：</b>HTML5、CSS3、HTTP / 浏览器、REST API ｜ 了解：Linux 常用命令</div>
+  </div>
+
+  </section>
+
+  <section class="box">
+  <h2>自我评价</h2>
+  <div class="evaluation">
+    <p>· 跨专业自学前端，有清晰技术路线（前端 → Full Stack → AI），靠真实项目驱动</p>
+    <p>· 不满足于调用 API，习惯追问原理与设计原因，具备独立排查能力</p>
+    <p>· 能独立把一个项目从架构、请求封装做到测试与部署，并用 Git 与文档沉淀经验；开发中借助 AI 工具，但核心设计由本人确定并验证</p>
+  </div>
+  </section>
+</div>
+</body>
+</html>
